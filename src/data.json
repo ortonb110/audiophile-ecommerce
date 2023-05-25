@@ -1,4 +1,4 @@
-[
+ [
   {
     "id": 1,
     "slug": "yx1-earphones",
@@ -281,7 +281,7 @@
       },
       {
         "quantity": 2,
-        "item": "Replacement earcups"
+        "item": "Replacement ear cups"
       },
       {
         "quantity": 1,
@@ -520,3 +520,5 @@
     ]
   }
 ]
+
+

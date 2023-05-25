@@ -1,16 +1,30 @@
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
+//Pages
+import Speakers from "./Pages/Speakers";
+import Headphones from "./Pages/Headphones";
+import RootLayout from "./Pages/RootLayout";
+import Earphones from "./Pages/Earphones";
+import Home from "./Pages/Home";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="speakers" element={<Speakers />} />
+      <Route path="headphones" element={<Headphones />} />
+      <Route path="earphones" element={<Earphones />} />
+    </Route>
+  )
+);
+
 function App() {
-  return (
-    <div>
-      <h1>Morbi interdum mollis sapien</h1>
-      <h2>Donec nec justo eget felis facilisis</h2>
-      <h3>Nunc sem lacus accum</h3>
-      <h4>interdum consectetuer</h4>
-      <h5>nascetur ridiculus musnascetur ridiculus mus</h5>
-      <h6>natoque penatibus et</h6>
-      <p className="overLine">bright orton</p>
-      <p className="subTitle">mavis ofori</p>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
